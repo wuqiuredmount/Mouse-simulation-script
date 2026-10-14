@@ -1,0 +1,51 @@
+# ================= 丝绸之路 - 自动点击配置 =================
+# 每个按钮对应一张模板截图（放在 data/assets/ 下）。
+# 运行时：只要屏幕出现该模板，就拟人点击一次。
+#
+# 模板命名建议用拼音/英文，避免个别环境下的中文路径问题。
+
+settings:
+  scan_interval: 0.6      # 每轮检测间隔（秒）
+  click_cooldown: 2.0     # 同一按钮点击后的冷却，防止连点
+  global_threshold: 0.85  # 默认匹配阈值（0~1，越大越严格）
+
+buttons:
+  - name: "开始吧"
+    template: "data/assets/sr_start.png"
+    threshold: 0.85
+    cooldown: 2.5
+
+  - name: "确定"
+    template: "data/assets/sr_confirm.png"
+    threshold: 0.85
+    cooldown: 2.0
+
+  - name: "求助锦囊"
+    template: "data/assets/sr_help.png"
+    threshold: 0.85
+    cooldown: 3.0
+
+  - name: "选项A"
+    template: "data/assets/sr_option_a.png"
+    threshold: 0.85
+    cooldown: 3.0
+
+  - name: "事件图标"
+    template: "data/assets/sr_event.png"
+    threshold: 0.82
+    cooldown: 3.0
+
+  - name: "感叹号"
+    template: "data/assets/sr_exclaim.png"
+    threshold: 0.82
+    cooldown: 3.0
+
+  - name: "宝箱左"
+    template: "data/assets/sr_chest_left.png"
+    threshold: 0.85
+    cooldown: 3.0
+
+  - name: "宝箱右"
+    template: "data/assets/sr_chest_right.png"
+    threshold: 0.85
+    cooldown: 3.0

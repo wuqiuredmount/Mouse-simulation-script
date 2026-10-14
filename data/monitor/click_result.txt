@@ -1,0 +1,6 @@
+admin: True
+fg_before: 三国乱世
+focused: 三国乱世
+fg_after_focus: 三国乱世
+clicked: (1713,1052)
+fg_after: 三国乱世

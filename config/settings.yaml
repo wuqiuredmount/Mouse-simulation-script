@@ -1,0 +1,39 @@
+# ================= 全局配置 =================
+app:
+  name: "AI Mouse Quiz Assistant"
+  log_level: "INFO"          # DEBUG | INFO | WARNING | ERROR
+
+capture:
+  backend: "mss"             # mss | pyautogui
+  fps: 5                     # 主循环检测频率（次/秒）
+  monitor: 1                 # 显示器编号（1 = 主屏）
+
+vision:
+  ocr_backend: "paddle"      # tesseract | paddle | easyocr | stub
+  ocr_lang: "chi_sim+eng"    # 语言包
+  template_threshold: 0.85   # 模板匹配阈值
+
+brain:
+  match_mode: "fuzzy"        # exact | contains | fuzzy
+  fuzzy_threshold: 0.80      # 模糊匹配相似度阈值
+  think_delay: [0.3, 0.9]    # 点击前的“思考”延迟区间（秒）
+
+mouse:
+  driver: "pydirectinput"    # pyautogui | pydirectinput（Flash/游戏推荐 pydirectinput）
+  speed: "human"             # human | instant
+  min_duration: 0.35         # 单次移动最短耗时（秒）
+  max_duration: 0.95         # 单次移动最长耗时（秒）
+  overshoot_prob: 0.6        # 过冲概率（更拟人）
+  tremor: 0.4                # 轨迹抖动强度
+  click_hold: [0.05, 0.14]   # 按下到松开时长区间（秒）
+  pre_click_delay: [0.08, 0.25]  # 移动到目标后、点击前停顿
+  click_count: 2             # 每个点击动作点几下（游戏常需双击生效）
+  double_interval: [0.08, 0.18]  # 双击两下之间的间隔区间（秒）
+  use_admin_agent: true      # 通过管理员代理执行点击（游戏以管理员运行时必须开）
+  game_window: "三国"         # 游戏窗口标题关键字
+
+safety:
+  hotkey_exit: "f1"          # 按下此键立即退出脚本（f1~f12 / esc）
+  failsafe: true             # 鼠标猛移到屏幕左上角触发紧急停止
+  dry_run: false             # true = 只识别并打印，不真正点击
+  max_actions_per_min: 30    # 每分钟最大操作次数（防误触发）

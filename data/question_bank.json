@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "description": "固定题库：题干 -> 正确答案。之后把真实题目填进 questions 数组即可。",
+  "questions": [
+    {
+      "id": "q001",
+      "question": "示例：中国的首都是哪里？",
+      "answer": "北京",
+      "options": ["北京", "上海", "广州", "深圳"],
+      "answer_index": 0,
+      "match": "contains"
+    },
+    {
+      "id": "q002",
+      "question": "示例：一年有多少个月？",
+      "answer": "12",
+      "options": ["10", "11", "12", "13"],
+      "answer_index": 2,
+      "match": "fuzzy"
+    }
+  ]
+}

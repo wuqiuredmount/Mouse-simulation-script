@@ -1,0 +1,20 @@
+# ===== AI 答题鼠标助手 - 依赖 =====
+# 截图
+mss>=9.0.1
+Pillow>=10.0
+numpy>=1.24
+
+# 图像处理 / 模板匹配
+opencv-python>=4.8
+
+# 配置
+PyYAML>=6.0
+
+# 鼠标控制（二选一，默认 pyautogui）
+pyautogui>=0.9.54
+pydirectinput>=1.0.4   # Windows 游戏内更可靠（可选）
+
+# OCR 后端（按需安装，settings.yaml 里切换）
+# pytesseract>=0.3.10  # 需另装 Tesseract-OCR 引擎
+# paddleocr>=2.7       # 中文识别更强，体积较大
+# easyocr>=1.7

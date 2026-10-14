@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# 系统文件
+nul
+Thumbs.db
+Desktop.ini
+
+# 快捷方式
+*.lnk
+
+# IDE
+.vscode/
+.idea/
+
+# 敏感信息（如果你有的话）
+.env
+config/secrets.yaml
+nul
+__pycache__/
+*.lnk
